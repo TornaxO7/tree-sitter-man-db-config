@@ -1,0 +1,11 @@
+===
+simple
+===
+
+MAXCATWIDTH 69
+
+---
+
+(file
+	(maxcatwidth (width))
+)

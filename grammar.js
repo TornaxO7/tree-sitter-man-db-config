@@ -21,6 +21,7 @@ module.exports = grammar({
       $.define,
       $.section,
       $.mincatwidth,
+      $.maxcatwidth,
     ),
 
     // # comment
@@ -64,8 +65,6 @@ module.exports = grammar({
       field("value", $.word),
     ),
 
-    word: $ => repeat1(/\S/),
-
     // SECTION section ...
     section: $ => seq(
       choice("SECTION", "SECTIONS"),
@@ -86,10 +85,19 @@ module.exports = grammar({
       $.width,
     ),
 
-    width: $ => NUMBER,
+    // MAXCATWIDTH width
+    maxcatwidth: $ => seq(
+      "MAXCATWIDTH",
+      WHITESPACES,
+      $.width,
+    ),
 
     // == elements ==
     path: $ => $._absolute_path,
+
+    word: $ => repeat1(/\S/),
+
+    width: $ => NUMBER,
 
     // == helpers ==
     _absolute_path: $ => seq(
