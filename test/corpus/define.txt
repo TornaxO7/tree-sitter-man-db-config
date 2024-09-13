@@ -1,0 +1,14 @@
+===
+simple
+===
+
+DEFINE some_WILDkey some_value_like_69_hehe_nice
+
+---
+
+(file
+	(define
+		key: (word)
+		value: (word)
+	)
+)

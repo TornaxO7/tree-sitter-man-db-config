@@ -16,16 +16,20 @@ module.exports = grammar({
       $.mandatory_manpath,
       $.manpath_map,
       $.mandb_map,
+      $.define,
     ),
 
+    // # comment
     comment: $ => /#.*/,
 
+    // MANDATORY_MANPATH manpath_element
     mandatory_manpath: $ => seq(
       "MANDATORY_MANPATH",
       WHITESPACES,
       field("manpath_element", $.path)
     ),
 
+    // MANPATH_MAP path_element manpath_element
     manpath_map: $ => seq(
       "MANPATH_MAP",
       WHITESPACES,
@@ -34,6 +38,7 @@ module.exports = grammar({
       field("manpath_element", $.path),
     ),
 
+    // MANDB_MAP manpath_element [ catpath_element ]
     mandb_map: $ => seq(
       "MANDB_MAP",
       WHITESPACES,
@@ -45,6 +50,17 @@ module.exports = grammar({
         )
       ),
     ),
+
+    // DEFINE key value
+    define: $ => seq(
+      "DEFINE",
+      WHITESPACES,
+      field("key", $.word),
+      WHITESPACES,
+      field("value", $.word),
+    ),
+
+    word: $ => repeat1(/\S/),
 
     // == elements ==
     path: $ => $._absolute_path,
