@@ -17,6 +17,7 @@ module.exports = grammar({
       $.manpath_map,
       $.mandb_map,
       $.define,
+      $.section,
     ),
 
     // # comment
@@ -61,6 +62,19 @@ module.exports = grammar({
     ),
 
     word: $ => repeat1(/\S/),
+
+    // SECTION section ...
+    section: $ => seq(
+      choice("SECTION", "SECTIONS"),
+      WHITESPACES,
+      $.word,
+      repeat1(
+        seq(
+          WHITESPACES,
+          $.word,
+        )
+      ),
+    ),
 
     // == elements ==
     path: $ => $._absolute_path,

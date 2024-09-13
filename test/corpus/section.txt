@@ -1,0 +1,49 @@
+===
+with `SECTION`
+===
+
+SECTION 1 2 3
+
+---
+
+(file
+	(section (word) (word) (word))
+)
+
+===
+with `SECTIONS`
+===
+
+SECTIONS 1 2 3
+
+---
+
+(file
+	(section (word) (word) (word))
+)
+
+===
+example from manual
+===
+
+SECTION 1 n l 8 3 0 2 3type 5 4 9 6 7
+
+---
+
+(file
+	(section
+		(word)
+		(word)
+		(word)
+		(word)
+		(word)
+		(word)
+		(word)
+		(word)
+		(word)
+		(word)
+		(word)
+		(word)
+		(word)
+	)
+)
