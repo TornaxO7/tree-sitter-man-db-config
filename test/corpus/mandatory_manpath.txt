@@ -1,0 +1,55 @@
+===
+simple
+===
+
+MANDATORY_MANPATH /sus/path
+
+---
+
+(config_file
+	(mandatory_manpath
+		manpath_element: (manpath_element)
+	)
+)
+
+===
+with multiple spaces
+===
+
+MANDATORY_MANPATH      /another-very/sus_path.txt
+
+---
+
+(config_file
+	(mandatory_manpath
+		manpath_element: (manpath_element)
+	)
+)
+
+===
+spaces in path
+===
+
+	MANDATORY_MANPATH /dir\ one/dir\ two
+
+---
+
+(config_file
+	(mandatory_manpath
+		manpath_element: (manpath_element)
+	)
+)
+
+===
+with trailing `/`
+===
+
+MANDATORY_MANPATH /dir1/dir2/
+
+---
+
+(config_file
+	(mandatory_manpath
+		manpath_element: (manpath_element)
+	)
+)

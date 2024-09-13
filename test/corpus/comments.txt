@@ -1,0 +1,23 @@
+===
+simple comment
+===
+
+# sus
+
+---
+
+(config_file
+	(comment)
+)
+
+===
+with spaces before "#"
+===
+
+    # comments starts after 4 spaces
+
+---
+
+(config_file
+	(comment)
+)
