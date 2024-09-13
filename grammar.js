@@ -5,7 +5,7 @@ const WHITESPACES = repeat1(
   )
 )
 
-const NUMBER = seq(/[1-9]/, /\d/)
+const NUMBER = seq(/[1-9]/, repeat(/\d/))
 
 module.exports = grammar({
   name: 'mandbconfig',
@@ -72,7 +72,7 @@ module.exports = grammar({
       choice("SECTION", "SECTIONS"),
       WHITESPACES,
       $.word,
-      repeat1(
+      repeat(
         seq(
           WHITESPACES,
           $.word,
