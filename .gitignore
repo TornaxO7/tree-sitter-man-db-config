@@ -1,1 +1,12 @@
 .direnv/
+.editorconfig
+.gitattributes
+Cargo.toml
+Makefile
+Package.swift
+binding.gyp
+bindings/
+package.json
+pyproject.toml
+setup.py
+src/
