@@ -6,9 +6,9 @@ MANDATORY_MANPATH /sus/path
 
 ---
 
-(config_file
+(file
 	(mandatory_manpath
-		manpath_element: (manpath_element)
+		manpath_element: (path)
 	)
 )
 
@@ -20,9 +20,9 @@ MANDATORY_MANPATH      /another-very/sus_path.txt
 
 ---
 
-(config_file
+(file
 	(mandatory_manpath
-		manpath_element: (manpath_element)
+		manpath_element: (path)
 	)
 )
 
@@ -34,9 +34,9 @@ spaces in path
 
 ---
 
-(config_file
+(file
 	(mandatory_manpath
-		manpath_element: (manpath_element)
+		manpath_element: (path)
 	)
 )
 
@@ -48,8 +48,8 @@ MANDATORY_MANPATH /dir1/dir2/
 
 ---
 
-(config_file
+(file
 	(mandatory_manpath
-		manpath_element: (manpath_element)
+		manpath_element: (path)
 	)
 )

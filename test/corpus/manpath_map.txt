@@ -1,0 +1,29 @@
+===
+simple
+===
+
+MANPATH_MAP /path/element /manpath/element
+
+---
+
+(file
+	(manpath_map
+		path_element: (path)
+		manpath_element: (path)
+	)
+)
+
+===
+with tabs as spaces
+===
+
+MANPATH_MAP		/path/element		/manpath/element
+
+---
+
+(file
+	(manpath_map
+		path_element: (path)
+		manpath_element: (path)
+	)
+)

@@ -6,7 +6,7 @@ simple comment
 
 ---
 
-(config_file
+(file
 	(comment)
 )
 
@@ -18,6 +18,6 @@ with spaces before "#"
 
 ---
 
-(config_file
+(file
 	(comment)
 )
