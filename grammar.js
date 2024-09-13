@@ -22,6 +22,8 @@ module.exports = grammar({
       $.section,
       $.mincatwidth,
       $.maxcatwidth,
+      $.catwidth,
+      $.nocache,
     ),
 
     // # comment
@@ -91,6 +93,16 @@ module.exports = grammar({
       WHITESPACES,
       $.width,
     ),
+
+    // CATWIDTH width
+    catwidth: $ => seq(
+      "CATWIDTH",
+      WHITESPACES,
+      $.width,
+    ),
+
+    // NOCACHE
+    nocache: $ => "NOCACHE",
 
     // == elements ==
     path: $ => $._absolute_path,

@@ -1,0 +1,11 @@
+===
+simple
+===
+
+NOCACHE
+
+---
+
+(file
+	(nocache)
+)
