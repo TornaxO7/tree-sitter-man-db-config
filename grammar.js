@@ -1,4 +1,4 @@
-const WHITESPACE = repeat1(
+const WHITESPACES = repeat1(
   choice(
     " ",
     "\t"
@@ -15,26 +15,42 @@ module.exports = grammar({
       $.comment,
       $.mandatory_manpath,
       $.manpath_map,
+      $.mandb_map,
     ),
 
     comment: $ => /#.*/,
 
     mandatory_manpath: $ => seq(
       "MANDATORY_MANPATH",
-      WHITESPACE,
+      WHITESPACES,
       field("manpath_element", $.path)
     ),
 
     manpath_map: $ => seq(
       "MANPATH_MAP",
-      WHITESPACE,
+      WHITESPACES,
       field("path_element", $.path),
-      WHITESPACE,
+      WHITESPACES,
       field("manpath_element", $.path),
     ),
 
+    mandb_map: $ => seq(
+      "MANDB_MAP",
+      WHITESPACES,
+      field("manpath_element", $.path),
+      optional(
+        seq(
+          WHITESPACES,
+          field("catpath_element", $.path)
+        )
+      ),
+    ),
+
     // == elements ==
-    path: $ => seq(
+    path: $ => $._absolute_path,
+
+    // == helpers ==
+    _absolute_path: $ => seq(
       repeat1(
         seq(
           "/",
@@ -43,8 +59,6 @@ module.exports = grammar({
       ),
       optional("/"),
     ),
-
-    // == helpers ==
 
     _dir_name: $ => repeat1(choice(/\S/, /\\\s/)),
   }

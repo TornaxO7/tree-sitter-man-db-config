@@ -1,0 +1,27 @@
+===
+with `catpath_element`
+===
+
+MANDB_MAP /path/element /with/catpath/element
+
+---
+
+(file
+	(mandb_map
+		manpath_element: (path)
+		catpath_element: (path)
+	)
+)
+
+===
+without `catpath_element`
+===
+
+MANDB_MAP /path/element
+
+---
+(file
+	(mandb_map
+		manpath_element: (path)
+	)
+)
