@@ -5,6 +5,8 @@ const WHITESPACES = repeat1(
   )
 )
 
+const NUMBER = seq(/[1-9]/, /\d/)
+
 module.exports = grammar({
   name: 'mandbconfig',
 
@@ -18,6 +20,7 @@ module.exports = grammar({
       $.mandb_map,
       $.define,
       $.section,
+      $.mincatwidth,
     ),
 
     // # comment
@@ -75,6 +78,15 @@ module.exports = grammar({
         )
       ),
     ),
+
+    // MINCATWIDTH width
+    mincatwidth: $ => seq(
+      "MINCATWIDTH",
+      WHITESPACES,
+      $.width,
+    ),
+
+    width: $ => NUMBER,
 
     // == elements ==
     path: $ => $._absolute_path,

@@ -1,0 +1,11 @@
+===
+simple
+===
+
+MINCATWIDTH 69
+
+---
+
+(file
+	(mincatwidth (width))
+)
