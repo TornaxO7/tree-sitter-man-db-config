@@ -1,0 +1,27 @@
+name: Create tree sitter bindings
+run-name: Tree-sitter bindings Generator
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-bindings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+
+      - name: Install nix
+        uses: DeterminateSystems/nix-installer-action@main
+
+      - name: Generate bindings
+        run: nix develop --command just build
+
+      - name: Git add, commit and push
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: binding-bot
+          commit: --signoff
+          message: Execute `just build`
+          push: --set-upstream origin bindings
