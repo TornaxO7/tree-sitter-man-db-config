@@ -1,0 +1,278 @@
+[
+  {
+    "type": "catwidth",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "width",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "define",
+    "named": true,
+    "fields": {
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "word",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "word",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "catwidth",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "define",
+          "named": true
+        },
+        {
+          "type": "mandatory_manpath",
+          "named": true
+        },
+        {
+          "type": "mandb_map",
+          "named": true
+        },
+        {
+          "type": "manpath_map",
+          "named": true
+        },
+        {
+          "type": "maxcatwidth",
+          "named": true
+        },
+        {
+          "type": "mincatwidth",
+          "named": true
+        },
+        {
+          "type": "nocache",
+          "named": true
+        },
+        {
+          "type": "section",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mandatory_manpath",
+    "named": true,
+    "fields": {
+      "manpath_element": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "path",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "mandb_map",
+    "named": true,
+    "fields": {
+      "catpath_element": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "path",
+            "named": true
+          }
+        ]
+      },
+      "manpath_element": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "path",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "manpath_map",
+    "named": true,
+    "fields": {
+      "manpath_element": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "path",
+            "named": true
+          }
+        ]
+      },
+      "path_element": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "path",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "maxcatwidth",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "width",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mincatwidth",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "width",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "path",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "width",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "word",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "\t",
+    "named": false
+  },
+  {
+    "type": " ",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": "CATWIDTH",
+    "named": false
+  },
+  {
+    "type": "DEFINE",
+    "named": false
+  },
+  {
+    "type": "MANDATORY_MANPATH",
+    "named": false
+  },
+  {
+    "type": "MANDB_MAP",
+    "named": false
+  },
+  {
+    "type": "MANPATH_MAP",
+    "named": false
+  },
+  {
+    "type": "MAXCATWIDTH",
+    "named": false
+  },
+  {
+    "type": "MINCATWIDTH",
+    "named": false
+  },
+  {
+    "type": "SECTION",
+    "named": false
+  },
+  {
+    "type": "SECTIONS",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "nocache",
+    "named": true
+  }
+]
